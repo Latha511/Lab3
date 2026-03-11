@@ -61,7 +61,7 @@ function modulo(a, b) {
 
 // Power: returns base raised to the exponent
 function power(base, exponent) {
-  return Math.pow(base, exponent);
+  return base ** exponent;
 }
 
 // Square root: returns the square root of n
