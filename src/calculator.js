@@ -31,7 +31,7 @@ function modulo(a, b) {
 
 // power (exponentiation)
 function power(base, exponent) {
-  return Math.pow(base, exponent);
+  return base ** exponent;
 }
 
 // square root
