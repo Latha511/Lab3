@@ -6,6 +6,17 @@
   "scripts": {
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Latha511/Lab3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Latha511/Lab3/issues"
+  },
+  "homepage": "https://github.com/Latha511/Lab3#readme",
   "devDependencies": {
     "jest": "^29.0.0"
   }
