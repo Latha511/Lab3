@@ -140,6 +140,22 @@ describe('modulo', () => {
   it('returns zero when dividend is zero', () => {
     expect(modulo(0, 5)).toBe(0);
   });
+
+  it('returns 1 for 5 % 2', () => {
+    expect(modulo(5, 2)).toBe(1);
+  });
+
+  it('returns 0 for equal dividend and divisor', () => {
+    expect(modulo(7, 7)).toBe(0);
+  });
+
+  it('works with decimal numbers', () => {
+    expect(modulo(5.5, 2)).toBeCloseTo(1.5, 5);
+  });
+
+  it('works with negative divisor', () => {
+    expect(modulo(7, -3)).toBe(1);
+  });
 });
 
 describe('power', () => {
@@ -165,6 +181,26 @@ describe('power', () => {
 
   it('handles decimal exponents', () => {
     expect(power(4, 0.5)).toBe(2);
+  });
+
+  it('returns 8 for 2 ^ 3', () => {
+    expect(power(2, 3)).toBe(8);
+  });
+
+  it('handles large exponents', () => {
+    expect(power(2, 10)).toBe(1024);
+  });
+
+  it('handles negative base with even exponent', () => {
+    expect(power(-2, 2)).toBe(4);
+  });
+
+  it('handles negative base with odd exponent', () => {
+    expect(power(-2, 3)).toBe(-8);
+  });
+
+  it('returns 1 for any base raised to 0', () => {
+    expect(power(100, 0)).toBe(1);
   });
 });
 
@@ -195,5 +231,25 @@ describe('squareRoot', () => {
 
   it('throws an error for negative numbers (edge case: -100)', () => {
     expect(() => squareRoot(-100)).toThrow('Cannot take square root of a negative number');
+  });
+
+  it('returns 4 for √16', () => {
+    expect(squareRoot(16)).toBe(4);
+  });
+
+  it('returns 1 for √1', () => {
+    expect(squareRoot(1)).toBe(1);
+  });
+
+  it('returns 10 for √100', () => {
+    expect(squareRoot(100)).toBe(10);
+  });
+
+  it('returns correct value for large perfect square', () => {
+    expect(squareRoot(144)).toBe(12);
+  });
+
+  it('throws an error for negative decimal', () => {
+    expect(() => squareRoot(-0.5)).toThrow('Cannot take square root of a negative number');
   });
 });
