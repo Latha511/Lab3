@@ -91,4 +91,6 @@ function main() {
 
 module.exports = { add, subtract, multiply, divide };
 
-main();
+if (require.main === module) {
+  main();
+}
